@@ -34,10 +34,7 @@ type Card struct {
 
 
 
-type Payment struct{
-	ID int
-	Amount Money
-}
+
 
 
 type PaymentSource struct {
@@ -46,3 +43,15 @@ type PaymentSource struct {
 	Balance Money // баланс в дирамах
 	
    }
+
+
+
+// Category представляет собой катенорию в которой был совершён платёж
+type Category string
+
+// Payment представляет информацию о платежах
+type Payment struct{
+	ID int
+	Amount Money
+	Category Category
+}
